@@ -6,8 +6,8 @@ import '../css/TwitterFeed.css';
 function HomeTopBar() {
   return (
     <div className="HomeTopBar">
-        <p id="HomeText">Home</p>
-        <div id = "HomeStarIcon">HI</div>
+        <p>Home</p>
+        <p id = "HomeStarIcon">HI</p>
     </div>
   );
 }
