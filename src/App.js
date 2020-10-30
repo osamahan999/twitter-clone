@@ -8,8 +8,8 @@ import Rightsidebar from './components/Rightsidebar'
 
 function App() {
   return (
-    <div>
-    
+    <div className="App">
+
       <Sidebar />
       <TwitterFeed />
       <Rightsidebar />

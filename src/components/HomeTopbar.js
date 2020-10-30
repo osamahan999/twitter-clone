@@ -7,6 +7,7 @@ function HomeTopBar() {
   return (
     <div className="HomeTopBar">
         <p id="HomeText">Home</p>
+        <div id = "HomeStarIcon">HI</div>
     </div>
   );
 }
