@@ -4,6 +4,7 @@
 background-color: #15202b;
 width: 33%;
 height: 100vh;
+min-width: 450px;
 }
 
 .HomeTopBar {
