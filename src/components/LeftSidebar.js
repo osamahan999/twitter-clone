@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 import '../css/Sidebar.css';
  
 
-function Sidebar() {
+function LeftSidebar() {
   return (
     <div className="Sidebar">
     </div>
   );
 }
 
-export default Sidebar
+export default LeftSidebar
