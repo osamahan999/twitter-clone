@@ -5,8 +5,10 @@
     display: flex;
 }
 
-#textbox {
+.textbox {
     width: 100%;
-    background-color: green;
-
+    background-color: #15202b;
+    color:white;
+    border:0;
+    text-align: left;
 }

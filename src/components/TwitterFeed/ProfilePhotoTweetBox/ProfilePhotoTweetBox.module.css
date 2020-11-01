@@ -2,10 +2,10 @@
 .ProfilePhotoTweetBox {
     min-width: 13%;
     min-height: 17vh;
-    background-color: purple;
+    background-color: #15202b;
 }
 
-#profile-photo {
+.profilephoto {
     margin-top: 13%;
     border-radius: 50%;
 }

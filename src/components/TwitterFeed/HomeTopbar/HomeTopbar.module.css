@@ -1,7 +1,7 @@
 .HomeTopBar {
     height: 5vh;
-    background-color: grey;
-    border-color: black;
+    background-color: #15202b;
+    border-color: #15202b;
     border-width: 2px;
     display: flex;
     flex-direction: row;
@@ -11,12 +11,12 @@
     
 }
 
-#HomeText {
+.HomeText {
     color:white;
     font-size: 1.1em;
 }
 
-#HomeStarIcon {
+.HomeStarIcon {
     color:white;
     font-size: 1.1em;
 }

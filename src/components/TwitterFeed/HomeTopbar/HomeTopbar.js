@@ -6,8 +6,8 @@ import styles from './HomeTopbar.module.css';
 function HomeTopBar() {
     return (
         <div className={styles.HomeTopBar}>
-            <p id="HomeText">Home</p>
-            <p id="HomeStarIcon">Star</p>
+            <p className={styles.HomeText} >Home</p>
+            <p className={styles.HomeStarIcon}>Star</p>
         </div>
     );
 }
