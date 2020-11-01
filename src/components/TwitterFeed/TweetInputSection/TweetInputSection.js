@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 
-import './TweetInputSection.css';
+import styles from './TweetInputSection.module.css';
+import TweetInput from './TweetInput/TweetInput';
 
 function TweetInputSection() {
     return (
-        <div className="TweetInputSection">
-
+        <div className={styles.TweetInputSection}>
+            <TweetInput />
         </div>
     );
 }

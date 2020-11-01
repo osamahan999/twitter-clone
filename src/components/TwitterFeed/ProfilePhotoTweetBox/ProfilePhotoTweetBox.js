@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-import './ProfilePhotoTweetBox.css';
+import styles from './ProfilePhotoTweetBox.module.css';
 
 
 function ProfilePhotoTweetbox() {
     return (
-        <div className="ProfilePhotoTweetBox">
+        <div className={styles.ProfilePhotoTweetBox}>
             <img id="profile-photo" src="https://pbs.twimg.com/profile_images/1304851858142294016/sjdpxN6r_normal.jpg"></img>
         </div>
     );

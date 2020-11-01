@@ -1,0 +1,12 @@
+.TweetInput {
+    min-width: 100%;
+    min-height:100%;
+
+    display: flex;
+}
+
+#textbox {
+    width: 100%;
+    background-color: green;
+
+}

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-import './HomeTopbar.css';
+import styles from './HomeTopbar.module.css';
 
 
 function HomeTopBar() {
     return (
-        <div className="HomeTopBar">
+        <div className={styles.HomeTopBar}>
             <p id="HomeText">Home</p>
             <p id="HomeStarIcon">Star</p>
         </div>
