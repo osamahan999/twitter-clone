@@ -7,8 +7,11 @@
 
 .textbox {
     width: 100%;
-    background-color: #15202b;
+    height: 40%;
+    margin-top: 4%;;
+    background-color: green;
     color:white;
+    font-size: 1.4em;
     border:0;
     text-align: left;
 }

@@ -1,0 +1,17 @@
+.BottomInputSection {
+   
+    margin-top: 3%;
+    border-top: grey;
+    border-bottom: #15202b;
+    border-left: #15202b;
+    border-right:#15202b;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.icons {
+    background-color: #15202b;
+    width:30%;
+    display:flex;
+    justify-content: space-evenly;
+}
