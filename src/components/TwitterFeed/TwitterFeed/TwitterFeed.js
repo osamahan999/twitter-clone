@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 
-import '../css/TwitterFeed.css';
-import HomeTopBar from './HomeTopbar'
- 
+import './TwitterFeed.css';
+import HomeTopBar from '../HomeTopbar/HomeTopbar'
+import Tweetbox from '../Tweetbox/Tweetbox'
 
 function TwitterFeed() {
   return (
     <div className="TwitterFeed">
       <HomeTopBar />
+      <Tweetbox />
     </div>
   );
 }

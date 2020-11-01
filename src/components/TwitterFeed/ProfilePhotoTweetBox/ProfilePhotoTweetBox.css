@@ -1,0 +1,11 @@
+
+.ProfilePhotoTweetBox {
+    min-width: 13%;
+    min-height: 17vh;
+    background-color: purple;
+}
+
+#profile-photo {
+    margin-top: 13%;
+    border-radius: 50%;
+}
