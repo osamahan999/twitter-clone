@@ -1,7 +1,9 @@
-.App {
-  text-align: center;
-  display:flex;
+* {
+  background-color: #15202b;
+}
 
+.App {
+  display:flex;
 }
 
 .App-logo {

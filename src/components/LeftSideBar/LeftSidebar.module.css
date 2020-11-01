@@ -1,0 +1,27 @@
+.container {
+	margin-top: 20px;
+	margin-left: 300px;
+	width: 255px;
+	display: flex;
+	flex-direction: column;
+}
+
+.twitterIcon {
+	font-size: 45px;
+	margin-left: -3px;
+	padding: 20px;
+	color: white;
+}
+
+.tweetButton {
+	margin-top: 15px;
+	height: 50px;
+	width: 230px;
+	padding: 10px 30px;
+	background: #1da1f2;
+	color: white;
+	font-weight: 700;
+	font-size: 15px;
+	border: none;
+	border-radius: 100px 100px 100px 100px;
+}

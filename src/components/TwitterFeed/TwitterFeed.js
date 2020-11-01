@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import '../css/TwitterFeed.css';
-import HomeTopBar from './HomeTopbar'
+import './TwitterFeed.css';
+import HomeTopBar from '../HomeTopbar'
  
 
 function TwitterFeed() {
