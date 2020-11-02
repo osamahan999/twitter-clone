@@ -1,0 +1,24 @@
+.HomeTopBar {
+    height: 5vh;
+    background-color: hsl(210, 34%, 13%);
+    border-color: grey;
+    border-top:1px;
+    border-width: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+
+.HomeText {
+    color:white;
+    font-size: 1.1em;
+}
+
+.HomeStarIcon {
+    color:white;
+    font-size: 1.1em;
+}
+

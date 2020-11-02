@@ -1,0 +1,9 @@
+.TweetNameInfoUserName {
+    color:grey;
+    margin-left:5px;
+}
+
+.TweetNameInfo {
+    display:flex;
+
+}
