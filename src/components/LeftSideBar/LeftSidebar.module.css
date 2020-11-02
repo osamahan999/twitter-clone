@@ -14,6 +14,7 @@
 }
 
 .tweetButton {
+	cursor: pointer;
 	margin-top: 15px;
 	height: 50px;
 	width: 230px;
@@ -24,4 +25,20 @@
 	font-size: 15px;
 	border: none;
 	border-radius: 100px 100px 100px 100px;
+}
+
+.tweetModal {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tweetModalContent {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+	width: 800px;
+	height: 300px;
+	background-color: white;
 }
