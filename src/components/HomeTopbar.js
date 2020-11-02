@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-import '../css/TwitterFeed.css';
 
 
 function HomeTopBar() {
