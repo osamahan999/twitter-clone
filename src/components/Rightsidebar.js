@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import '../css/Sidebar.css';
+// import '../css/Sidebar.css';
  
 
 function Rightsidebar() {

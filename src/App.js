@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import './css/App.css';
-import LeftSidebar from './components/LeftSidebar'
+import './App.css';
+import LeftSidebar from './components/LeftSideBar/LeftSidebar'
 import TwitterFeed from './components/TwitterFeed/TwitterFeed/TwitterFeed'
 import Rightsidebar from './components/Rightsidebar'
 
