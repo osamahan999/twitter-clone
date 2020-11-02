@@ -12,6 +12,10 @@ function TwitterFeed() {
       <HomeTopBar />
       <Tweetbox />
       <Tweet />
+      <Tweet />
+      <Tweet />
+      <Tweet />
+
       {/* here we have a compnent for each tweet from the database */}
     </div>
   );

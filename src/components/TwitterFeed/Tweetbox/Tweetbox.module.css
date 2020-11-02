@@ -6,4 +6,12 @@
     min-height: 17vh;
     display:flex;
 
+
+    border-top: grey;
+    border-bottom: grey;
+    border-left: grey;
+    border-right:grey;
+    border-style: solid;
+    border-width: 1px;
+
 }
