@@ -7,9 +7,7 @@ function TweetInput() {
     return (
         <div>
 
-
-
-            <div className={styles.TweetInput}>
+            <div className={styles.TweetInput} >
                 <textarea type="text" className={styles.textbox} placeholder="What's happening?"></textarea>
             </div>
 
