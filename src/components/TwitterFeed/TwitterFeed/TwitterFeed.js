@@ -16,10 +16,10 @@ function TwitterFeed() {
       <Tweetbox />
 
 
-      <Tweet name="Sam" handle="Huge cock sam" timeTweeted="1hr" content="love men" url="https://pbs.twimg.com/profile_images/1304851858142294016/sjdpxN6r_normal.jpg" />
-      <Tweet name="Osama" handle="Huge cock sam" timeTweeted="1hr" content="llove menlove menlove menove men" url="https://pbs.twimg.com/profile_images/1304851858142294016/sjdpxN6r_normal.jpg" />
-      <Tweet name="John" handle="Huge cock sam" timeTweeted="1hr" content="love mlove menen" url="https://pbs.twimg.com/profile_images/1304851858142294016/sjdpxN6r_normal.jpg" />
-      <Tweet name="Carl" handle="Huge cock sam" timeTweeted="1hr" content="lovelove menlove menlove menlove menlove men men" url="https://pbs.twimg.com/profile_images/1304851858142294016/sjdpxN6r_normal.jpg" />
+      <Tweet name="Sam" handle="SamLouder" timeTweeted="1hr" content="love dogs" url="https://pbs.twimg.com/profile_images/1304851858142294016/sjdpxN6r_normal.jpg" />
+      <Tweet name="Osama" handle="OsamaH" timeTweeted="1hr" content="Hate dogs" url="https://pbs.twimg.com/profile_images/1304851858142294016/sjdpxN6r_normal.jpg" />
+      <Tweet name="John" handle="BigJohn" timeTweeted="1hr" content="love cats!" url="https://pbs.twimg.com/profile_images/1304851858142294016/sjdpxN6r_normal.jpg" />
+      <Tweet name="Carl" handle="CarlSayAgain" timeTweeted="1hr" content="love frogs!" url="https://pbs.twimg.com/profile_images/1304851858142294016/sjdpxN6r_normal.jpg" />
 
 
       {/* here we have a compnent for each tweet from the database */}
