@@ -1,0 +1,48 @@
+.container {
+	margin-top: 6px;
+	margin-left: 30px;
+	display: flex;
+	flex-direction: column;
+	color: white;
+	width: 350px;
+}
+
+.searchContainer {
+	display: flex;
+	align-items: center;
+	background-color: #253341;
+	padding: 10px;
+	border-radius: 20px;
+	max-height: 22px;
+	max-width: 350px;
+}
+
+.searchIcon {
+	color: #8899a6;
+}
+
+.searchText {
+	background-color: #253341;
+	color: #cad7e2;
+	border: none;
+	margin-left: 10px;
+	font-size: 15px;
+}
+
+.blueRoundedCard {
+	background-color: #192734;
+	padding-top: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.headerText {
+	margin-top: 0px;
+	display: flex;
+	font-size: 19px;
+	font-weight: 800;
+}
+
+.footerText {
+	display: inline;
+}
