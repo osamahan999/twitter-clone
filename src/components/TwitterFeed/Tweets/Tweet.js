@@ -3,12 +3,19 @@ import React, { useState } from 'react';
 import TweetContainer from './TweetContainer/TweetContainer'
 import styles from './Tweet.module.css';
 
-function Tweet() {
+const axios = require('axios');
+
+function Tweet(props) {
+
+
+
+
+
     return (
         <div className={styles.Tweet}>
             {/* X Liked this tweet */}
 
-            <TweetContainer />
+            <TweetContainer name={props.name} handle={props.handle} timeTweeted={props.timeTweeted} content={props.content} url={props.url} />
 
 
 
