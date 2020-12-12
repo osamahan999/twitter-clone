@@ -8,6 +8,7 @@ import LikeIcon from './TweetIcons/LikeIcon';
 import ShareIcon from './TweetIcons/ShareIcon';
 import styles from './TweetButtonContainer.module.css';
 import CommentIconModal from './CommentIconModal/CommentIconModal';
+import RetweetIconModal from './RetweetIconModal/RetweetIconModal';
 
 function TweetButtonContainer(props) {
     const [open, setOpen] = React.useState(false);
@@ -27,7 +28,7 @@ function TweetButtonContainer(props) {
 
             <TweetIconAndHandler Icon={RetweetIcon}
                 child={
-                    <CommentIconModal name={props.name} url={props.url} content={props.content}
+                    <RetweetIconModal name={props.name} url={props.url} content={props.content}
                         timeTweeted={props.timeTweeted} handle={props.handle} />
                 }
             />
