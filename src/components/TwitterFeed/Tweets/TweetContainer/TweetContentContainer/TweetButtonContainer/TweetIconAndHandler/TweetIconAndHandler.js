@@ -2,10 +2,7 @@ import React, { useState } from 'react';
 import Modal from "@material-ui/core/Modal";
 
 import TweetButton from '../TweetButton/TweetButton'
-import ProfilePhotoTweetBox from '../../../../../ProfilePhotoTweetBox/ProfilePhotoTweetBox'
-import TweetUserInfo from '../../TweetUserInfo/TweetUserInfo'
-import TweetText from '../../TweetText/TweetText'
-
+import CommentIconModal from './CommentIconModal/CommentIconModal'
 import styles from './TweetIconAndHandler.module.css';
 
 function TweetIconAndHandler({ Icon, name, handle, timeTweeted, url, content }) {
@@ -20,23 +17,26 @@ function TweetIconAndHandler({ Icon, name, handle, timeTweeted, url, content }) 
         setOpen(false);
     };
 
+    //cleaner return statement down below by simpyl putting this div in this const
+    const getCommentIconModal = () => {
+        return (<CommentIconModal name={name} url={url} content={content} timeTweeted={timeTweeted} handle={handle} />);
+    }
+
+
+    const getRetweetIconModal = () => {
+        return (<CommentIconModal name={name} url={url} content={content} timeTweeted={timeTweeted} handle={handle} />);
+
+    }
+
     return (
         <div className={styles.TweetIconAndHandler}>
 
             <TweetButton Icon={Icon} handlerFunction={handleOpen} />
 
             <Modal open={open} onClose={handleClose} className={styles.tweetModal}>
-                <div className={styles.tweetModalContent}>
-                    <ProfilePhotoTweetBox url={url} />
-                    <div>
+                {(Icon.name == "CommentIcon" && getCommentIconModal())
+                    || (Icon.name == "RetweetIcon" && getCommentIconModal())}
 
-
-                        <TweetUserInfo name={name} handle={handle} timeTweeted={timeTweeted} />
-
-                        <TweetText content={content} />
-                    </div>
-
-                </div>
             </Modal>
         </div>
     );

@@ -11,7 +11,6 @@ function TweetInput() {
                 <textarea type="text" className={styles.textbox} placeholder="What's happening?"></textarea>
             </div>
 
-            <BottomInputSection />
         </div>
     );
 }

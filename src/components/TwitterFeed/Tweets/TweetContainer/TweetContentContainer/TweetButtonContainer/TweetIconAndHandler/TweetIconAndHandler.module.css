@@ -4,16 +4,3 @@
 	align-items: center;
 }
 
-.tweetModalContent {
-	display:flex;
-
-	display: 0;
-	justify-content: left;
-	font-size: 24px;
-	width: 800px;
-	height: 300px;
-	color: white;
-	background-color: #15202b;
-
-}
-    

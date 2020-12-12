@@ -1,0 +1,23 @@
+.tweetModalContent {
+	display:flex;
+
+	display: 0;
+	justify-content: left;
+	font-size: 24px;
+	width: 800px;
+	height: 300px;
+	color: white;
+	background-color: #15202b;
+
+}
+	
+
+.container {
+	display:flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.retweetText {
+    font-size: 12px;
+}
