@@ -7,6 +7,7 @@ import RetweetIcon from './TweetIcons/RetweetIcon';
 import LikeIcon from './TweetIcons/LikeIcon';
 import ShareIcon from './TweetIcons/ShareIcon';
 import styles from './TweetButtonContainer.module.css';
+import CommentIconModal from './CommentIconModal/CommentIconModal';
 
 function TweetButtonContainer(props) {
     const [open, setOpen] = React.useState(false);
@@ -15,8 +16,22 @@ function TweetButtonContainer(props) {
         <div className={styles.TweetButtonContainer}>
 
             {/* 4 buttons here  */}
-            <TweetIconAndHandler Icon={CommentIcon} name={props.name} handle={props.handle} timeTweeted={props.timeTweeted} url={props.url} content={props.content} />
-            <TweetIconAndHandler Icon={RetweetIcon} name={props.name} handle={props.handle} timeTweeted={props.timeTweeted} url={props.url} content={props.content} />
+            <TweetIconAndHandler
+                Icon={CommentIcon}
+                child={
+                    <CommentIconModal name={props.name} url={props.url} content={props.content}
+                        timeTweeted={props.timeTweeted} handle={props.handle} />
+                }
+            />
+
+
+            <TweetIconAndHandler Icon={RetweetIcon}
+                child={
+                    <CommentIconModal name={props.name} url={props.url} content={props.content}
+                        timeTweeted={props.timeTweeted} handle={props.handle} />
+                }
+            />
+
             <TweetIconAndHandler Icon={LikeIcon} name={props.name} handle={props.handle} timeTweeted={props.timeTweeted} url={props.url} content={props.content} />
             <TweetIconAndHandler Icon={ShareIcon} name={props.name} handle={props.handle} timeTweeted={props.timeTweeted} url={props.url} content={props.content} />
 

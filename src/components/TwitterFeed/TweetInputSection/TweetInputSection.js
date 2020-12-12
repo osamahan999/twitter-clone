@@ -4,10 +4,10 @@ import styles from './TweetInputSection.module.css';
 import TweetInput from './TweetInput/TweetInput';
 import BottomInputSection from './TweetInput/BottomInputSection/BottomInputSection';
 
-function TweetInputSection() {
+function TweetInputSection(props) {
     return (
         <div className={styles.TweetInputSection}>
-            <TweetInput />
+            <TweetInput placeholder={props.placeholder} />
 
             <BottomInputSection />
 
