@@ -1,5 +1,5 @@
 .container {
-	margin-top: 6px;
+	margin-top: 7px;
 	margin-left: 30px;
 	display: flex;
 	flex-direction: column;
@@ -9,7 +9,6 @@
 
 .searchContainer {
 	display: flex;
-	align-items: center;
 	background-color: #253341;
 	padding: 10px;
 	border-radius: 20px;
@@ -31,18 +30,25 @@
 
 .blueRoundedCard {
 	background-color: #192734;
-	padding-top: 0px;
-	padding-left: 10px;
-	padding-right: 10px;
+	margin-top: 17px;
+	margin-right: 10px;
+	border-radius: 15px;
 }
 
 .headerText {
 	margin-top: 0px;
-	display: flex;
+	margin: 13px 16px 13px 16px;
+	/* display: flex; */
 	font-size: 19px;
-	font-weight: 800;
+	font-weight: 500;
+}
+
+.bottomDivider {
+	border-top: 0.1px solid grey;
+	margin-top: 16px;
 }
 
 .footerText {
-	display: inline;
+	color: #1da1f2;
+	margin-left: 16px;
 }

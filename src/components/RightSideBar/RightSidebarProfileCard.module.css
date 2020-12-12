@@ -1,0 +1,33 @@
+.container {
+    width: 100%;
+    border-top: 0.1px solid grey;
+}
+
+.content {
+    margin: 16px 16px 16px 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.username {
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+}
+
+.handle {
+    font-size: 12px;
+    color: rgb(136, 153, 166);
+}
+
+.followButton {
+    border-color: #1da1f2;
+	border-radius: 20px;
+    color: #1da1f2;
+    margin-left: auto;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 600;
+    width: 25%;
+}
