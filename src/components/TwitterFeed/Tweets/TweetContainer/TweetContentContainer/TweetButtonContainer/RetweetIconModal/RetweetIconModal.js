@@ -8,11 +8,16 @@ import ProfilePhotoTweetbox from '../../../../../ProfilePhotoTweetBox/ProfilePho
 
 import TweetInput from '../../../../../TweetInputSection/TweetInput/TweetInput';
 import BottomInputSection from '../../../../../TweetInputSection/TweetInput/BottomInputSection/BottomInputSection';
+import TopSection from '../../../../../TweetInputSection/TweetInput/TopSection/TopSection';
 
-function RetweetIconModal({ Icon, name, handle, timeTweeted, url, content }) {
+function RetweetIconModal({ Icon, name, handle, timeTweeted, url, content, handleClose }) {
 
+
+    //this should be componentalized a bit more but for now i just wanna get it down
     return (
         <div className={styles.RetweetIconModal}>
+
+            <TopSection handleClose={handleClose} />
 
             <div className={styles.tweet}>
 

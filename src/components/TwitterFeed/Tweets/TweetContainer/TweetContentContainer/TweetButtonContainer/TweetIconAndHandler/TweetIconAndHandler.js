@@ -4,17 +4,8 @@ import Modal from "@material-ui/core/Modal";
 import TweetButton from '../TweetButton/TweetButton'
 import styles from './TweetIconAndHandler.module.css';
 
-function TweetIconAndHandler({ Icon, child }) {
-    const [open, setOpen] = React.useState(false);
+function TweetIconAndHandler({ Icon, child, open, handleOpen, handleClose }) {
 
-
-    const handleOpen = () => {
-        setOpen(true);
-    };
-
-    const handleClose = () => {
-        setOpen(false);
-    };
 
 
     return (

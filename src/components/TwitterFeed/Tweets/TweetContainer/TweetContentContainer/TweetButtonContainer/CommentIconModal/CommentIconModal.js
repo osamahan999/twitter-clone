@@ -6,11 +6,14 @@ import TweetText from '../../TweetText/TweetText'
 import styles from './CommentIconModal.module.css';
 import ProfilePhotoTweetbox from '../../../../../ProfilePhotoTweetBox/ProfilePhotoTweetBox';
 import Tweetbox from '../../../../../Tweetbox/Tweetbox';
+import TopSection from '../../../../../TweetInputSection/TweetInput/TopSection/TopSection';
 
-function CommentIconModal({ Icon, name, handle, timeTweeted, url, content }) {
+function CommentIconModal({ Icon, name, handle, timeTweeted, url, content, handleClose }) {
 
     return (
         <div className={styles.tweetModalContent}>
+
+            <TopSection handleClose={handleClose} />
 
             <div className={styles.tweet}>
 
