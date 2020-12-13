@@ -27,7 +27,7 @@
 	margin-left: 10px;
 	font-size: 15px;
 	outline: 0;
-    -moz-outline-style: none;
+	-moz-outline-style: none;
 }
 
 .blueRoundedCard {
@@ -54,4 +54,30 @@
 .footerText {
 	color: #1da1f2;
 	margin-left: 16px;
+}
+
+.legalFooter {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-top: 15px;
+	margin-left: 25px;
+}
+
+.legalFooterRow {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	gap: 10px;
+	font-size: 13px;
+	line-height: 1.3125;
+}
+
+.footerLink {
+	color: rgb(136, 153, 166);
+	text-decoration: none;
+}
+
+.footerLink:hover {
+	text-decoration: underline;
 }

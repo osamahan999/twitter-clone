@@ -54,6 +54,30 @@ function RightSidebar() {
           <p className={styles.footerText}>Show more</p>
         </div>
       </div>
+      <div className={styles.legalFooter}>
+      <div className={styles.legalFooterRow}>
+        <a href="https://www.google.com/" className={styles.footerLink}>
+          Terms of Service
+        </a>
+        <a href="https://www.google.com/" className={styles.footerLink}>
+          Privacy Policy
+        </a>
+        <a href="https://www.google.com/" className={styles.footerLink}>
+          Cookie Policy
+        </a>
+      </div>
+      <div className={styles.legalFooterRow}>
+        <a href="https://www.google.com/" className={styles.footerLink}>
+          Ads info
+        </a>
+        <a href="https://www.google.com/" className={styles.footerLink}>
+          More
+        </a>
+        <a href="https://www.google.com/" className={styles.footerLink}>
+          © 2020 Twitter, Inc.
+        </a>
+      </div>
+      </div>
     </div>
   );
 }
