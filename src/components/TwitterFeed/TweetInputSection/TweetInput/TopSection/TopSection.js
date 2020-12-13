@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
+import ExitIcon from '../../../Tweets/TweetContainer/TweetContentContainer/TweetButtonContainer/TweetIcons/ExitIcon';
 
 import styles from './TopSection.module.css';
 
 function TopSection(props) {
     return (
         <div className={styles.TopSection}>
-            <button onClick={props.handleClose}>X</button>
+            <ExitIcon onClick={props.handleClose} />
 
-            <button>Unsent Tweets</button>
+            <span className={styles.UnsentTweets}>Unsent Tweets</span>
 
         </div>
     );

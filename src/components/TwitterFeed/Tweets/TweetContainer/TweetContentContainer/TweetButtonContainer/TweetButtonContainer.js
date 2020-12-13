@@ -13,9 +13,20 @@ function TweetButtonContainer(props) {
 
     const [commentOpen, setCommentOpen] = React.useState(false);
     const [retweetOpen, setRetweetOpen] = React.useState(false);
+    const [liked, setLiked] = React.useState(false);
+
+    const likeTweet = () => {
+
+        const newVal = !liked;
 
 
+        //send like to server
+        //if success, return the icon that is colored in
 
+        const success = true;
+
+        success ? setLiked(newVal) : console.log("error");
+    }
 
 
     return (
@@ -61,7 +72,12 @@ function TweetButtonContainer(props) {
 
             />
 
-            <TweetIconAndHandler Icon={LikeIcon} name={props.name} handle={props.handle} timeTweeted={props.timeTweeted} url={props.url} content={props.content} />
+            {liked ? <LikeIcon className={styles.LikeIconLiked} onClick={() => likeTweet()} /> : <LikeIcon onClick={() => likeTweet()} />}
+
+
+
+
+
             <TweetIconAndHandler Icon={ShareIcon} name={props.name} handle={props.handle} timeTweeted={props.timeTweeted} url={props.url} content={props.content} />
 
 
