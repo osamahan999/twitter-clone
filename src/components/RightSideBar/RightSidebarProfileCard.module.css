@@ -22,12 +22,15 @@
 }
 
 .followButton {
-    border-color: #1da1f2;
-	border-radius: 20px;
-    color: #1da1f2;
+    outline: 0;
+    -moz-outline-style: none;
     margin-left: auto;
-    text-transform: capitalize;
+    background-color: #192734;
+    border: 1.5px solid #1da1f2;
+    border-radius: 20px;
+    color: #1da1f2;
+    padding: 4px 14px;
     font-size: 14px;
     font-weight: 600;
-    width: 25%;
+    cursor: pointer;
 }
