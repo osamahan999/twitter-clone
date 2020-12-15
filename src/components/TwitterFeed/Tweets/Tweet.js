@@ -4,7 +4,6 @@ import styles from './Tweet.module.css';
 import ProfilePhotoTweetbox from '../ProfilePhotoTweetBox/ProfilePhotoTweetBox';
 import TweetContentContainer from './TweetContainer/TweetContentContainer/TweetContentContainer';
 
-const axios = require('axios');
 
 function Tweet(props) {
 

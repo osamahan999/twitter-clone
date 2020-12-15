@@ -5,26 +5,58 @@ import HomeTopBar from '../HomeTopbar/HomeTopbar'
 import Tweetbox from '../Tweetbox/Tweetbox'
 import Tweet from '../Tweets/Tweet'
 
-//axios get request to get tweet content 
+const axios = require('axios');
+
+/**
+ * Temporary identification variables
+ */
+const userUUID = "5fd8983dc0bee625f4526ace"; //a user's id which we wil be storing probably using contexts?
+const url = "https://pbs.twimg.com/profile_images/1304851858142294016/sjdpxN6r_normal.jpg";
+
 
 
 
 function TwitterFeed() {
-  const url = "https://pbs.twimg.com/profile_images/1304851858142294016/sjdpxN6r_normal.jpg";
+
+  const [tweets, setTweets] = useState(null);
+  const [getTweets, setGetTweets] = useState(true);
+
+
+  if (getTweets) {  //axios get request to get tweet content 
+    setGetTweets(false);
+
+
+    axios.get("http://localhost:5000/tweets/getUserTweets", {
+      params: {
+        userID: userUUID
+      }
+    }).then((response) => {
+
+      setTweets(response.data);
+
+
+      console.log(response.data);
+    }).catch((error) => {
+
+      console.log(error)
+    })
+  }
 
   return (
     <div className={styles.TwitterFeed}>
       <HomeTopBar />
-      <Tweetbox className={styles.Tweetbox} url={url} placeholder="What's happening?" />
+      <Tweetbox updateFeed={() => setGetTweets(true)} className={styles.Tweetbox} url={url} placeholder="What's happening?" />
 
 
-      <Tweet name="Sam" handle="SamLouder" timeTweeted="1hr" content="love dogs" url={url} />
-      <Tweet name="Osama" handle="OsamaH" timeTweeted="1hr" content="Hate dogs" url={url} />
-      <Tweet name="John" handle="BigJohn" timeTweeted="1hr" content="love cats!" url={url} />
-      <Tweet name="Carl" handle="CarlSayAgain" timeTweeted="1hr" content="love frogs!" url={url} />
+      {/*returns each tweet from a user. obv not what we want but a start!!!  */}
 
 
-      {/* here we have a compnent for each tweet from the database */}
+      {tweets && tweets.map((tweet) => {
+
+        return <Tweet name="Osama" handle="OsamaH" timeTweeted={tweet.createdAt} content={tweet.tweetBody} url={url} />
+
+      })}
+
     </div>
   );
 }
