@@ -4,11 +4,11 @@ import styles from './Tweetbox.module.css';
 import ProfilePhotoTweetBox from '../ProfilePhotoTweetBox/ProfilePhotoTweetBox'
 import TweetInputSection from '../TweetInputSection/TweetInputSection'
 
-function Tweetbox() {
+function Tweetbox(props) {
     return (
-        <div className={styles.Tweetbox}>
-            <ProfilePhotoTweetBox />
-            <TweetInputSection />
+        <div className={props.className}>
+            <ProfilePhotoTweetBox url={props.url} />
+            <TweetInputSection placeholder={props.placeholder} />
         </div>
     );
 }

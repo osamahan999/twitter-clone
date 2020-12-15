@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import ThreeDotsIcon from '../../../../../TweetInputSection/TweetInput/BottomInputSection/BottomIcons/Icons/ThreeDotsIcon/ThreeDotsIcon';
 
 import styles from './TweetReport.module.css';
 
 function TweetReport() {
     return (
         <div className={styles.TweetReport}>
-            <p>3 dots </p>
+            <ThreeDotsIcon />
         </div>
     );
 }

@@ -1,0 +1,15 @@
+.TopSection {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.UnsentTweets {
+    line-height: 1.3125;
+    margin-top: 1%;
+    margin-right: 3%;
+    font-size: 17px;
+    box-sizing: border-box;
+    color: rgb(29, 161, 242);
+
+}

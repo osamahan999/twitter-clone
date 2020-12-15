@@ -2,16 +2,11 @@
 
 
 .Tweetbox {
-    min-width: 100%;
+    width: 100%;
     min-height: 17vh;
     display:flex;
+    background-color: #15202b;
+    
 
-
-    border-top: grey;
-    border-bottom: grey;
-    border-left: grey;
-    border-right:grey;
-    border-style: solid;
-    border-width: 1px;
 
 }

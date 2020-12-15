@@ -1,0 +1,37 @@
+.tweetModalContent {
+	display:flex;
+flex-direction: column;
+	display: 0;
+	justify-content: left;
+	width: 800px;
+	height: 300px;
+	color: white;
+	background-color: #15202b;
+
+}
+	
+
+.container {
+	display:flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.retweetText {
+    font-size: 12px;
+}
+
+.tweet {
+	display: flex;
+	flex-direction: row;
+}
+
+.Tweetbox {
+	width: 100%;
+    min-height: 17vh;
+    display:flex;
+    background-color: #15202b;
+    
+
+
+}

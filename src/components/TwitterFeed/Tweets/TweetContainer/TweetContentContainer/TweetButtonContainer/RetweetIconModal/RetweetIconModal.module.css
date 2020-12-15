@@ -1,0 +1,62 @@
+.RetweetIconModal    {
+	display:flex;
+flex-direction: column;
+	display: 0;
+	justify-content: left;
+	width: 800px;
+	height: 300px;
+	color: white;
+	background-color: #15202b;
+
+}
+	
+
+.container {
+	display:flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.retweetText {
+    font-size: 12px;
+}
+
+.tweet {
+	display: flex;
+	flex-direction: row;
+}
+
+.Tweetbox {
+	width: 100%;
+    min-height: 17vh;
+    display:flex;
+    background-color: #15202b;
+    
+
+
+}
+
+.header {
+    display:flex;
+    flex-direction: row;
+}
+
+.tweetWrapper {
+     
+    border: grey;
+    border-radius: 15px;
+    margin-right: 5%;
+    border-style: solid;
+    border-width: 1px;
+    
+}
+
+.image {
+    border-radius: 25px;
+    height: auto; 
+    width: auto; 
+    max-width: 100px; 
+    max-height: 100px;
+
+    
+}
