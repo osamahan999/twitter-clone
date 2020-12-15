@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import TweetUserInfo from '../../TweetUserInfo/TweetUserInfo'
 import TweetText from '../../TweetText/TweetText'
@@ -10,7 +10,50 @@ import TweetInput from '../../../../../TweetInputSection/TweetInput/TweetInput';
 import BottomInputSection from '../../../../../TweetInputSection/TweetInput/BottomInputSection/BottomInputSection';
 import TopSection from '../../../../../TweetInputSection/TweetInput/TopSection/TopSection';
 
-function RetweetIconModal({ Icon, name, handle, timeTweeted, url, content, handleClose }) {
+const axios = require('axios');
+
+
+
+const userUUID = "5fd8983dc0bee625f4526ace"; //a user's id which we wil be storing probably using contexts?
+
+
+
+function RetweetIconModal({ Icon, tweetUUID, name, handle, timeTweeted, url, content, handleClose }) {
+
+    const [tweetContent, setTweetContent] = useState(null);
+    const [submitted, setSubmitted] = useState(false);
+    const [submissionReceivedByChild, setSubmissionReceivedByChild] = useState(false);
+    const [tweetClicked, setTweetClicked] = useState(false);
+
+    useEffect(() => {
+        if (tweetClicked) {
+            setSubmitted(true);
+
+            if (tweetContent) {
+
+                // tweetUUID is the parent tweet!!!
+
+                axios.post("http://localhost:5000/tweets/addRetweet", {
+                    userID: userUUID,
+                    tweetBody: tweetContent,
+                    tweetUUID: tweetUUID
+                }).then((response) => {
+
+
+                    console.log(response.data);
+                }).catch((error) => {
+
+                    console.log(error)
+                })
+
+
+            }
+        }
+
+        setTweetClicked(false);
+
+    })
+
 
 
     //this should be componentalized a bit more but for now i just wanna get it down
@@ -23,7 +66,12 @@ function RetweetIconModal({ Icon, name, handle, timeTweeted, url, content, handl
 
                 <ProfilePhotoTweetbox url={url} />
                 <div className={styles.container}>
-                    <TweetInput placeholder="retweet" />
+                    <TweetInput
+                        handleSubmit={(e) => setTweetContent(e)}
+                        isSubmitted={submitted}
+                        submissionReceived={() => setSubmissionReceivedByChild(true)}
+                        placeholder="retweet"
+                    />
 
                     <div className={styles.tweetWrapper}>
 
@@ -41,7 +89,7 @@ function RetweetIconModal({ Icon, name, handle, timeTweeted, url, content, handl
                     </div>
                     <p>THIS IS DATA FROM SERVER Everyone can reply</p>
 
-                    <BottomInputSection />
+                    <BottomInputSection handleClick={() => setTweetClicked(true)} />
 
                 </div>
 

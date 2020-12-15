@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import styles from './TwitterFeed.module.css';
 import HomeTopBar from '../HomeTopbar/HomeTopbar'
@@ -16,31 +16,39 @@ const url = "https://pbs.twimg.com/profile_images/1304851858142294016/sjdpxN6r_n
 
 
 
+
 function TwitterFeed() {
 
   const [tweets, setTweets] = useState(null);
   const [getTweets, setGetTweets] = useState(true);
 
 
-  if (getTweets) {  //axios get request to get tweet content 
-    setGetTweets(false);
+  //use of useEffect fixes the double post problem. 
+  useEffect(() => {
+    if (getTweets) {  //axios get request to get tweet content 
+      setGetTweets(false);
 
 
-    axios.get("http://localhost:5000/tweets/getUserTweets", {
-      params: {
-        userID: userUUID
-      }
-    }).then((response) => {
+      axios.get("http://localhost:5000/tweets/getUserTweets", {
+        params: {
+          userID: userUUID
+        }
+      }).then((response) => {
 
-      setTweets(response.data);
+        setTweets(response.data);
 
 
-      console.log(response.data);
-    }).catch((error) => {
 
-      console.log(error)
-    })
-  }
+
+        console.log(response.data);
+      }).catch((error) => {
+
+        console.log(error)
+      })
+    }
+
+  })
+
 
 
 
@@ -82,7 +90,7 @@ function TwitterFeed() {
 
       {tweets && tweets.map((tweet) => {
 
-        return <Tweet name="Osama" handle="OsamaH" timeTweeted={getTimeSinceTweeted(tweet.createdAt)} content={tweet.tweetBody} url={url} />
+        return <Tweet tweetUUID={tweet._id} name="Osama" handle="OsamaH" timeTweeted={getTimeSinceTweeted(tweet.createdAt)} content={tweet.tweetBody} url={url} />
 
       })}
 

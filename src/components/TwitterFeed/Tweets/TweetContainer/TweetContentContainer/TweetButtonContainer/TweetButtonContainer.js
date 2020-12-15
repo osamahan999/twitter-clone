@@ -61,9 +61,16 @@ function TweetButtonContainer(props) {
                 handleClose={() => setRetweetOpen(false)}
                 handleOpen={() => setRetweetOpen(true)}
 
+
                 child={
-                    <RetweetIconModal name={props.name} url={props.url} content={props.content}
-                        timeTweeted={props.timeTweeted} handle={props.handle} handleClose={() => setRetweetOpen(false)}
+                    <RetweetIconModal
+                        tweetUUID={props.tweetUUID}
+                        name={props.name}
+                        url={props.url}
+                        content={props.content}
+                        timeTweeted={props.timeTweeted}
+                        handle={props.handle}
+                        handleClose={() => setRetweetOpen(false)}
 
                     />
                 }

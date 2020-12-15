@@ -17,7 +17,7 @@ function Tweet(props) {
 
             <div className={styles.TweetContainer}>
                 <ProfilePhotoTweetbox url={props.url} />
-                <TweetContentContainer name={props.name} handle={props.handle} timeTweeted={props.timeTweeted} content={props.content} url={props.url} />
+                <TweetContentContainer tweetUUID={props.tweetUUID} name={props.name} handle={props.handle} timeTweeted={props.timeTweeted} content={props.content} url={props.url} />
             </div>
 
 

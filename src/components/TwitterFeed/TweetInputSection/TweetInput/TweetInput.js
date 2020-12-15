@@ -7,11 +7,11 @@ function TweetInput(props) {
     const [content, setContent] = useState(null);
 
     useEffect(() => {
-        { props.handleSubmit(content) };
+        { props.handleSubmit(content) }; //sends the content up to the container that holds it
 
-        if (props.isSubmitted) {
+        if (props.isSubmitted) { //flag from container of whether to pull the data
 
-            { props.submissionReceived() };
+            { props.submissionReceived() }; // sends the container that it has received the submission request and has sent the content up
         }
     })
 
