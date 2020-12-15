@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
-import TweetContainer from './TweetContainer/TweetContainer'
 import styles from './Tweet.module.css';
+import ProfilePhotoTweetbox from '../ProfilePhotoTweetBox/ProfilePhotoTweetBox';
+import TweetContentContainer from './TweetContainer/TweetContentContainer/TweetContentContainer';
 
 const axios = require('axios');
 
@@ -15,8 +16,10 @@ function Tweet(props) {
         <div className={styles.Tweet}>
             {/* X Liked this tweet */}
 
-            <TweetContainer name={props.name} handle={props.handle} timeTweeted={props.timeTweeted} content={props.content} url={props.url} />
-
+            <div className={styles.TweetContainer}>
+                <ProfilePhotoTweetbox url={props.url} />
+                <TweetContentContainer name={props.name} handle={props.handle} timeTweeted={props.timeTweeted} content={props.content} url={props.url} />
+            </div>
 
 
         </div>
