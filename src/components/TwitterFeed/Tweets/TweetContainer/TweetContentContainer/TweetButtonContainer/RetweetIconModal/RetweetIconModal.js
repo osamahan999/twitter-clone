@@ -28,7 +28,10 @@ function RetweetIconModal({ Icon, name, handle, timeTweeted, url, content, handl
                     <div className={styles.tweetWrapper}>
 
                         <div className={styles.header}>
-                            <img className={styles.image} src={url}></img>
+                            <img alt="" draggable="true"
+                                src={url} className={styles.image}>
+                            </img>
+
                             <TweetUserInfo name={name} handle={handle} timeTweeted={timeTweeted} />
                         </div>
 
