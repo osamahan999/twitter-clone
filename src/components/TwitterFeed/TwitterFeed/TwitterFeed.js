@@ -42,6 +42,35 @@ function TwitterFeed() {
     })
   }
 
+
+
+  /**
+   * Getting time in seconds, minutes, hours, days, or months for timestamp of tweet
+   * @param {} timestamp 
+   */
+  const getTimeSinceTweeted = (timestamp) => {
+    var time = (((new Date().getTime()) - (new Date(timestamp).getTime())) / 1000);
+
+    if (time / 60 <= 1) return Math.floor(time) + "s";
+    time /= 60;
+    if (time / 60 <= 1) return (Math.floor(time) + "m");
+    time /= 60;
+
+    if (time / 24 <= 1) return (Math.floor(time) + "hr");
+    time /= 24;
+
+    if (time / 30 <= 1) return (Math.floor(time) + " days");
+    time /= 30;
+
+    if (time / 12 <= 1) return (Math.floor(time) + " months");
+    time /= 12;
+
+    return (time + " years");
+
+
+  }
+
+
   return (
     <div className={styles.TwitterFeed}>
       <HomeTopBar />
@@ -53,7 +82,7 @@ function TwitterFeed() {
 
       {tweets && tweets.map((tweet) => {
 
-        return <Tweet name="Osama" handle="OsamaH" timeTweeted={tweet.createdAt} content={tweet.tweetBody} url={url} />
+        return <Tweet name="Osama" handle="OsamaH" timeTweeted={getTimeSinceTweeted(tweet.createdAt)} content={tweet.tweetBody} url={url} />
 
       })}
 

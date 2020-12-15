@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
 import styles from './TweetInput.module.css';
-import BottomInputSection from './BottomInputSection/BottomInputSection';
 
 function TweetInput(props) {
 
