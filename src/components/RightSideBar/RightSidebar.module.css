@@ -1,0 +1,83 @@
+.container {
+	margin-top: 7px;
+	margin-left: 30px;
+	display: flex;
+	flex-direction: column;
+	color: white;
+	width: 350px;
+}
+
+.searchContainer {
+	display: flex;
+	background-color: #253341;
+	padding: 10px;
+	border-radius: 20px;
+	max-height: 22px;
+	max-width: 350px;
+}
+
+.searchIcon {
+	color: #8899a6;
+}
+
+.searchText {
+	background-color: #253341;
+	color: #cad7e2;
+	border: none;
+	margin-left: 10px;
+	font-size: 15px;
+	outline: 0;
+	-moz-outline-style: none;
+}
+
+.blueRoundedCard {
+	background-color: #192734;
+	margin-top: 17px;
+	margin-right: 10px;
+	border-radius: 15px;
+	width: 100%;
+}
+
+.headerText {
+	margin-top: 0px;
+	margin: 13px 16px 13px 16px;
+	/* display: flex; */
+	font-size: 19px;
+	font-weight: 500;
+}
+
+.bottomDivider {
+	border-top: 0.1px solid grey;
+	margin-top: 16px;
+}
+
+.footerText {
+	color: #1da1f2;
+	margin-left: 16px;
+}
+
+.legalFooter {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-top: 15px;
+	margin-left: 25px;
+}
+
+.legalFooterRow {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	gap: 10px;
+	font-size: 13px;
+	line-height: 1.3125;
+}
+
+.footerLink {
+	color: rgb(136, 153, 166);
+	text-decoration: none;
+}
+
+.footerLink:hover {
+	text-decoration: underline;
+}

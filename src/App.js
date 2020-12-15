@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import './App.css';
 import LeftSidebar from './components/LeftSideBar/LeftSidebar'
 import TwitterFeed from './components/TwitterFeed/TwitterFeed/TwitterFeed'
-import Rightsidebar from './components/Rightsidebar'
+import RightSidebar from './components/RightSideBar/RightSidebar'
 
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
 
       <LeftSidebar />
       <TwitterFeed />
-      <Rightsidebar />
+      <RightSidebar />
 
 
     </div>
