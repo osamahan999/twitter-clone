@@ -1,6 +1,6 @@
 .App {
-  background-color: #15202b;
-  display:flex;
+  /* background-color: #15202b; */
+  display: flex;
   flex-direction: row;
 }
 

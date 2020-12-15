@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import './App.css';
-import LeftSidebar from './components/LeftSideBar/LeftSidebar'
-import TwitterFeed from './components/TwitterFeed/TwitterFeed/TwitterFeed'
-import RightSidebar from './components/RightSideBar/RightSidebar'
+import "./App.css";
+import LeftSidebar from "./components/LeftSideBar/LeftSidebar";
+import TwitterFeed from "./components/TwitterFeed/TwitterFeed/TwitterFeed";
+import RightSidebar from "./components/RightSideBar/RightSidebar";
 
+import LandingPage from "./pages/Landing/Landing";
 
 function App() {
   return (
     <div className="App">
-
-      <LeftSidebar />
+      {/* <LeftSidebar />
       <TwitterFeed />
-      <RightSidebar />
+      <RightSidebar /> */}
 
-
+      <LandingPage />
     </div>
   );
 }

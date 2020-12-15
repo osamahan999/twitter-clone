@@ -1,0 +1,15 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+}
+
+.leftSide {
+    background-color: rgb(116, 202, 254);
+    width: 50%;
+    height: 100%;
+}
+
+.twitterBird {
+    color: rgba(29, 161, 242, 1.00);
+    height: 160vh;
+}
