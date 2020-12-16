@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import CommentIcon from './TweetIcons/CommentIcon'
 import TweetIconAndHandler from './TweetIconAndHandler/TweetIconAndHandler'
@@ -9,23 +9,74 @@ import styles from './TweetButtonContainer.module.css';
 import CommentIconModal from './CommentIconModal/CommentIconModal';
 import RetweetIconModal from './RetweetIconModal/RetweetIconModal';
 
+const axios = require('axios');
+
 function TweetButtonContainer(props) {
 
     const [commentOpen, setCommentOpen] = React.useState(false);
     const [retweetOpen, setRetweetOpen] = React.useState(false);
     const [liked, setLiked] = React.useState(false);
 
+    const userUUID = "5fd8983dc0bee625f4526ace"; //a user's id which we wil be storing probably using contexts?
+
+    useEffect(() => {
+
+
+        axios.get("http://localhost:5000/tweets/isLiked", {
+            params: {
+                userID: userUUID,
+                tweetUUID: props.tweetUUID
+            }
+        }).then((response) => {
+            console.log(response.data);
+
+
+            if ((response.data == 0)) setLiked(false);
+            else setLiked(true);
+
+
+        }).catch((error) => {
+
+            console.log(error)
+        })
+
+
+
+
+
+    })
+
+
     const likeTweet = () => {
 
-        const newVal = !liked;
+
+        if (!liked) {
+
+            axios.post("http://localhost:5000/tweets/like", {
+
+                tweetUUID: props.tweetUUID,
+                userID: userUUID
+
+            }).then((response) => {
+                setLiked(true);
+
+            })
+        } else {
+
+            //unlikes
+            axios.post("http://localhost:5000/tweets/unlike", {
+
+                tweetUUID: props.tweetUUID,
+                userID: userUUID
+
+            }).then((response) => {
+                setLiked(false);
+
+            })
 
 
-        //send like to server
-        //if success, return the icon that is colored in
+        }
 
-        const success = true;
-
-        success ? setLiked(newVal) : console.log("error");
     }
 
 

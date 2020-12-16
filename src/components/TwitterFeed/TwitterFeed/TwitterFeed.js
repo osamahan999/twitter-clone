@@ -80,21 +80,28 @@ function TwitterFeed() {
 
 
   return (
-    <div className={styles.TwitterFeed}>
+
+    <div className={styles.TopBar}>
       <HomeTopBar />
-      <Tweetbox updateFeed={() => setGetTweets(true)} className={styles.Tweetbox} url={url} placeholder="What's happening?" />
+
+      <div className={styles.TwitterFeed}>
 
 
-      {/*returns each tweet from a user. obv not what we want but a start!!!  */}
+        <Tweetbox updateFeed={() => setGetTweets(true)} className={styles.Tweetbox} url={url} placeholder="What's happening?" />
 
 
-      {tweets && tweets.map((tweet) => {
+        {/*returns each tweet from a user. obv not what we want but a start!!!  */}
 
-        return <Tweet tweetUUID={tweet._id} name="Osama" handle="OsamaH" timeTweeted={getTimeSinceTweeted(tweet.createdAt)} content={tweet.tweetBody} url={url} />
 
-      })}
+        {tweets && tweets.map((tweet) => {
 
+          return <Tweet tweetUUID={tweet._id} name="Osama" handle="OsamaH" timeTweeted={getTimeSinceTweeted(tweet.createdAt)} content={tweet.tweetBody} url={url} />
+
+        })}
+
+      </div>
     </div>
+
   );
 }
 
