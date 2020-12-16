@@ -16,8 +16,10 @@ function TweetButtonContainer(props) {
     const [commentOpen, setCommentOpen] = React.useState(false);
     const [retweetOpen, setRetweetOpen] = React.useState(false);
     const [liked, setLiked] = React.useState(false);
+
     const [amtOfLikes, setAmtOfLikes] = React.useState(props.likes);
     const [amtOfRetweets, setAmtOfRetweets] = React.useState(props.retweets);
+    const [isRetweeted, setIsRetweeted] = React.useState(false);
 
     const userUUID = "5fd8983dc0bee625f4526ace"; //a user's id which we wil be storing probably using contexts?
 
@@ -40,7 +42,15 @@ function TweetButtonContainer(props) {
             console.log(error)
         })
 
-
+        axios.get("http://localhost:5000/tweets/isRetweeted", {
+            params: {
+                userID: userUUID,
+                tweetUUID: props.tweetUUID
+            }
+        }).then((response) => {
+            if (response.data == "true") setIsRetweeted(true);
+            else setIsRetweeted(false);
+        })
 
 
 
@@ -129,6 +139,7 @@ function TweetButtonContainer(props) {
 
             <TweetIconAndHandler
                 Icon={RetweetIcon}
+                isActivated={isRetweeted}
 
                 data={amtOfRetweets}
 

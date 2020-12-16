@@ -5,11 +5,18 @@
 }
 
 .icon {
-    
     padding: 5px;
 }
 
 .container {
+
+	display:flex;
+	flex-direction: row;
+}
+
+.containerRetweet {
+	color: rgb(23, 191, 99);
+
 	display:flex;
 	flex-direction: row;
 }

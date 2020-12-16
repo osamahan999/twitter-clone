@@ -101,7 +101,11 @@ function TwitterFeed() {
             content={tweet.tweetBody}
             url={url}
             likes={tweet.numOfLikes}
-            retweets={tweet.numOfRetweetsWithNoComment + tweet.numOfRetweetsWithComment}
+
+            // thought this conditional would fix the NaN problem with retweets but thats because
+            //those documents were made without the numOf fields and so it returns undefined
+            retweets={(tweet.numOfRetweetsWithNoComment + tweet.numOfRetweetsWithComment) > -1
+              ? ((tweet.numOfRetweetsWithNoComment + tweet.numOfRetweetsWithComment)) : 0}
           />
 
         })}
