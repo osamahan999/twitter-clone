@@ -17,6 +17,7 @@ function TweetButtonContainer(props) {
     const [retweetOpen, setRetweetOpen] = React.useState(false);
     const [liked, setLiked] = React.useState(false);
     const [amtOfLikes, setAmtOfLikes] = React.useState(props.likes);
+    const [amtOfRetweets, setAmtOfRetweets] = React.useState(props.retweets);
 
     const userUUID = "5fd8983dc0bee625f4526ace"; //a user's id which we wil be storing probably using contexts?
 
@@ -129,12 +130,15 @@ function TweetButtonContainer(props) {
             <TweetIconAndHandler
                 Icon={RetweetIcon}
 
+                data={amtOfRetweets}
+
                 handleClose={() => setRetweetOpen(false)}
                 handleOpen={() => setRetweetOpen(true)}
 
 
                 child={
                     <RetweetIconModal
+                        updateRetweets={(e) => setAmtOfRetweets(e)}
                         tweetUUID={props.tweetUUID}
                         name={props.name}
                         url={props.url}

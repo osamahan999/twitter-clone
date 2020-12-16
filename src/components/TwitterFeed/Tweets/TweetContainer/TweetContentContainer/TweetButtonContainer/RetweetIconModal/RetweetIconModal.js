@@ -18,7 +18,7 @@ const userUUID = "5fd8983dc0bee625f4526ace"; //a user's id which we wil be stori
 
 
 
-function RetweetIconModal({ Icon, tweetUUID, name, handle, timeTweeted, url, content, handleClose }) {
+function RetweetIconModal({ updateRetweets, tweetUUID, name, handle, timeTweeted, url, content, handleClose }) {
 
     const [tweetContent, setTweetContent] = useState(null);
     const [submitted, setSubmitted] = useState(false);
@@ -39,8 +39,26 @@ function RetweetIconModal({ Icon, tweetUUID, name, handle, timeTweeted, url, con
                     tweetUUID: tweetUUID
                 }).then((response) => {
 
+                    updateTweetComponent();
+                    console.log(response.data);
+                }).catch((error) => {
+
+                    console.log(error)
+                })
+
+
+            } else {
+
+                handleClose();
+
+                axios.post("http://localhost:5000/tweets/addRetweetWithNoComment", {
+                    userID: userUUID,
+                    tweetUUID: tweetUUID
+                }).then((response) => {
+                    updateTweetComponent();
 
                     console.log(response.data);
+
                 }).catch((error) => {
 
                     console.log(error)
@@ -54,7 +72,21 @@ function RetweetIconModal({ Icon, tweetUUID, name, handle, timeTweeted, url, con
 
     })
 
+    /**
+       * Only updates the actual tweet component when the retweet happens rather than calling updateFeed()
+       */
+    const updateTweetComponent = () => {
+        axios.get("http://localhost:5000/tweets/getTweet", {
+            params: {
+                tweetUUID: tweetUUID
+            }
+        }).then((response) => {
 
+            updateRetweets(response.data[0].numOfRetweetsWithNoComment + response.data[0].numOfRetweetsWithComment);
+
+
+        }).catch((error) => console.log(error))
+    }
 
     //this should be componentalized a bit more but for now i just wanna get it down
     return (

@@ -8,3 +8,8 @@
     
     padding: 5px;
 }
+
+.container {
+	display:flex;
+	flex-direction: row;
+}

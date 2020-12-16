@@ -20,6 +20,7 @@ function TweetContentContainer(props) {
 
                 updateFeed={props.updateFeed}
                 likes={props.likes}
+                retweets={props.retweets}
                 tweetUUID={props.tweetUUID}
                 name={props.name}
                 handle={props.handle}

@@ -101,6 +101,7 @@ function TwitterFeed() {
             content={tweet.tweetBody}
             url={url}
             likes={tweet.numOfLikes}
+            retweets={tweet.numOfRetweetsWithNoComment + tweet.numOfRetweetsWithComment}
           />
 
         })}
