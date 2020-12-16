@@ -16,7 +16,17 @@ function TweetContentContainer(props) {
                 <p className={styles.TweetTextContent}>{props.content}</p>
             </div>
 
-            <TweetButtonContainer tweetUUID={props.tweetUUID} name={props.name} handle={props.handle} timeTweeted={props.timeTweeted} url={props.url} content={props.content} />
+            <TweetButtonContainer
+
+                updateFeed={props.updateFeed}
+                likes={props.likes}
+                tweetUUID={props.tweetUUID}
+                name={props.name}
+                handle={props.handle}
+                timeTweeted={props.timeTweeted}
+                url={props.url}
+                content={props.content}
+            />
         </div>
     );
 }

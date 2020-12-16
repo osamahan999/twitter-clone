@@ -37,10 +37,6 @@ function TwitterFeed() {
 
         setTweets(response.data);
 
-
-
-
-        console.log(response.data);
       }).catch((error) => {
 
         console.log(error)
@@ -95,7 +91,17 @@ function TwitterFeed() {
 
         {tweets && tweets.map((tweet) => {
 
-          return <Tweet tweetUUID={tweet._id} name="Osama" handle="OsamaH" timeTweeted={getTimeSinceTweeted(tweet.createdAt)} content={tweet.tweetBody} url={url} />
+          return <Tweet
+
+            updateFeed={() => setGetTweets(true)}
+            tweetUUID={tweet._id}
+            name="Osama"
+            handle="OsamaH"
+            timeTweeted={getTimeSinceTweeted(tweet.createdAt)}
+            content={tweet.tweetBody}
+            url={url}
+            likes={tweet.numOfLikes}
+          />
 
         })}
 

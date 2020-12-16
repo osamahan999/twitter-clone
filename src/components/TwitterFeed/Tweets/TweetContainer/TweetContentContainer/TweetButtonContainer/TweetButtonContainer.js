@@ -16,11 +16,11 @@ function TweetButtonContainer(props) {
     const [commentOpen, setCommentOpen] = React.useState(false);
     const [retweetOpen, setRetweetOpen] = React.useState(false);
     const [liked, setLiked] = React.useState(false);
+    const [amtOfLikes, setAmtOfLikes] = React.useState(props.likes);
 
     const userUUID = "5fd8983dc0bee625f4526ace"; //a user's id which we wil be storing probably using contexts?
 
     useEffect(() => {
-
 
         axios.get("http://localhost:5000/tweets/isLiked", {
             params: {
@@ -28,7 +28,6 @@ function TweetButtonContainer(props) {
                 tweetUUID: props.tweetUUID
             }
         }).then((response) => {
-            console.log(response.data);
 
 
             if ((response.data == 0)) setLiked(false);
@@ -47,6 +46,10 @@ function TweetButtonContainer(props) {
     })
 
 
+    /**
+     * If the tweet is liked, it calls the unlike functionality 
+     * if it is not liked, it calls the like functonality
+     */
     const likeTweet = () => {
 
 
@@ -60,7 +63,10 @@ function TweetButtonContainer(props) {
             }).then((response) => {
                 setLiked(true);
 
-            })
+                updateTweetComponent();
+
+
+            }).catch((error) => console.log(error))
         } else {
 
             //unlikes
@@ -71,12 +77,27 @@ function TweetButtonContainer(props) {
 
             }).then((response) => {
                 setLiked(false);
+                updateTweetComponent();
 
-            })
+            }).catch((error) => console.log(error))
 
 
         }
 
+    }
+
+
+    /**
+     * Only updates the actual tweet component when the like happens rather than calling updateFeed()
+     */
+    const updateTweetComponent = () => {
+        axios.get("http://localhost:5000/tweets/getTweet", {
+            params: {
+                tweetUUID: props.tweetUUID
+            }
+        }).then((response) => {
+            setAmtOfLikes(response.data[0].numOfLikes);
+        }).catch((error) => console.log(error))
     }
 
 
@@ -89,7 +110,6 @@ function TweetButtonContainer(props) {
                 Icon={CommentIcon}
                 handleClose={() => setCommentOpen(false)}
                 handleOpen={() => {
-                    console.log("test");
                     setCommentOpen(true);
                 }}
 
@@ -130,7 +150,26 @@ function TweetButtonContainer(props) {
 
             />
 
-            {liked ? <LikeIcon className={styles.LikeIconLiked} onClick={() => likeTweet()} /> : <LikeIcon onClick={() => likeTweet()} />}
+            {liked ?
+                <div className={styles.likeIconAndLikes}>
+
+                    <LikeIcon
+                        className={styles.LikeIconLiked}
+                        onClick={() => likeTweet()}
+                    />
+                    <p>{amtOfLikes}</p>
+
+                </div>
+                :
+                <div className={styles.likeIconAndLikes} >
+                    <LikeIcon
+                        onClick={() => likeTweet()}
+                    />
+
+                    <p>{amtOfLikes}</p>
+                </div>
+
+            }
 
 
 
@@ -139,7 +178,7 @@ function TweetButtonContainer(props) {
             <TweetIconAndHandler Icon={ShareIcon} name={props.name} handle={props.handle} timeTweeted={props.timeTweeted} url={props.url} content={props.content} />
 
 
-        </div>
+        </div >
     );
 }
 
