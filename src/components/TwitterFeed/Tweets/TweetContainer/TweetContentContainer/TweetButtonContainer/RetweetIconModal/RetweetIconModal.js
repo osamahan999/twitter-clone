@@ -33,7 +33,7 @@ function RetweetIconModal({ updateRetweets, tweetUUID, name, handle, timeTweeted
 
                 // tweetUUID is the parent tweet!!!
 
-                axios.post("http://localhost:5000/tweets/addRetweet", {
+                axios.post("http://localhost:5000/tweets/addRetweetWithComment", {
                     userID: userUUID,
                     tweetBody: tweetContent,
                     tweetUUID: tweetUUID
