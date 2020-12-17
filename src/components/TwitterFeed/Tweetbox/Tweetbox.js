@@ -8,7 +8,7 @@ function Tweetbox(props) {
     return (
         <div className={props.className}>
             <ProfilePhotoTweetBox url={props.url} />
-            <TweetInputSection placeholder={props.placeholder} />
+            <TweetInputSection updateFeed={props.updateFeed} placeholder={props.placeholder} />
         </div>
     );
 }

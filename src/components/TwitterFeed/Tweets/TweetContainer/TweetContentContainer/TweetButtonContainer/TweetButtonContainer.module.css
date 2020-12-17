@@ -11,3 +11,9 @@
     color: red;
     fill: currentColor;
 }
+
+.likeIconAndLikes {
+    display:flex;
+    flex-direction: row;
+    
+}

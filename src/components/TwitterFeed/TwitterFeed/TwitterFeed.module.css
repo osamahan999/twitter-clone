@@ -3,7 +3,6 @@
 
 
     border-top: grey;
-    border-bottom: grey;
     border-left: grey;
     border-right:grey;
     border-style: solid;
@@ -12,12 +11,19 @@
     padding-right: 2px;
     background-color: #15202b;
     width: 37%;
-    height: 100vh;
+    height: 94.6vh;
     min-width: 600px;
+    overflow-y: auto;  /*adds scroll to this container*/
+    scrollbar-width: none;  /* Firefox */
 }
 
+.TopBar {
 
-
+    border-left: grey;
+    border-right:grey;
+    border-style: solid;
+    border-width: 1px;
+}
 
 .Tweetbox {
 
@@ -29,7 +35,6 @@
 
     
     border-top: grey;
-    border-bottom: grey;
     border-left: grey;
     border-right:grey;
     border-style: solid;

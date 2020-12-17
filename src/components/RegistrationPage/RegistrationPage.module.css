@@ -1,0 +1,24 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.topBar {
+    display: flex;
+    flex-direction: row;
+}
+
+.leftSpacer {
+    width:44%;
+}
+
+.rightSpacer {
+    width:44%;
+}
+
+.DOBcontainer {
+    display: flex;
+    flex-direction: row;
+}
