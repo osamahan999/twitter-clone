@@ -3,17 +3,41 @@
 
 
     border-top: grey;
-    border-bottom: grey;
     border-left: grey;
     border-right:grey;
     border-style: solid;
     border-width: 1px;
 
-padding-right: 2px;
-background-color: #15202b;
-width: 37%;
-height: 100vh;
-min-width: 600px;
+    padding-right: 2px;
+    background-color: #15202b;
+    width: 37%;
+    height: 94.6vh;
+    min-width: 600px;
+    overflow-y: auto;  /*adds scroll to this container*/
+    scrollbar-width: none;  /* Firefox */
 }
 
+.TopBar {
 
+    border-left: grey;
+    border-right:grey;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.Tweetbox {
+
+    width: 100%;
+    min-height: 17vh;
+    display:flex;
+    background-color: #15202b;
+    
+
+    
+    border-top: grey;
+    border-left: grey;
+    border-right:grey;
+    border-style: solid;
+    border-width: 1px;
+
+}

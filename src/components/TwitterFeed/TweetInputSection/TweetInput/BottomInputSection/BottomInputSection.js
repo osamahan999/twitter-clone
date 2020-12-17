@@ -4,11 +4,11 @@ import BottomIcons from './BottomIcons/BottomIcons'
 import TweetButton from './TweetButton/TweetButton'
 import styles from './BottomInputSection.module.css';
 
-function BottomInputSection() {
+function BottomInputSection(props) {
     return (
         <div className={styles.BottomInputSection}>
             <BottomIcons />
-            <TweetButton />
+            <TweetButton handleClick={props.handleClick} />
         </div>
     );
 }

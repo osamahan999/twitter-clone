@@ -13,3 +13,9 @@
 
     color: white;
 }
+
+
+
+.TweetContainer {
+    display:flex;
+}

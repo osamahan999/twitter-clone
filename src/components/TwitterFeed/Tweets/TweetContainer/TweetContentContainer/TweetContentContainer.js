@@ -1,23 +1,33 @@
 import React, { useState } from 'react';
 
 import TweetUserInfo from './TweetUserInfo/TweetUserInfo'
-import TweetText from './TweetText/TweetText'
 import TweetButtonContainer from './TweetButtonContainer/TweetButtonContainer'
 import styles from './TweetContentContainer.module.css';
 
-function TweetContentContainer() {
+function TweetContentContainer(props) {
+
+
+
     return (
         <div className={styles.TweetContentContainer}>
-            {/* username and time */}
-            <TweetUserInfo />
-            {/* tweet text */}
-            <TweetText />
+            <TweetUserInfo name={props.name} handle={props.handle} timeTweeted={props.timeTweeted} />
 
-            {/* tweet images */}
+            <div className={styles.TweetText}>
+                <p className={styles.TweetTextContent}>{props.content}</p>
+            </div>
 
-            {/* tweet buttons */}
+            <TweetButtonContainer
 
-            <TweetButtonContainer />
+                updateFeed={props.updateFeed}
+                likes={props.likes}
+                retweets={props.retweets}
+                tweetUUID={props.tweetUUID}
+                name={props.name}
+                handle={props.handle}
+                timeTweeted={props.timeTweeted}
+                url={props.url}
+                content={props.content}
+            />
         </div>
     );
 }

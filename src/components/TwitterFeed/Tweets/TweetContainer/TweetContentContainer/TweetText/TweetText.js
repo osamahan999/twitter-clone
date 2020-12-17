@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 
 import styles from './TweetText.module.css';
 
-function TweetText() {
+function TweetText(props) {
     return (
         <div className={styles.TweetText}>
-            <p className={styles.TweetTextContent}>hi i ate pancake</p>
+            <p className={styles.TweetTextContent}>{props.content}</p>
         </div>
     );
 }
