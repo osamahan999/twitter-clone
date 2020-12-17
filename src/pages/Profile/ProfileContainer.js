@@ -17,8 +17,10 @@ function ProfileContainer() {
 
     const [tweets, setTweets] = useState(null);
     const [getTweets, setGetTweets] = useState(true);
-
     const [currentTwitterFeed, setCurrentTwitterFeed] = useState("tweet");
+
+
+
 
 
     //use of useEffect fixes the double post problem. 
@@ -92,8 +94,8 @@ function ProfileContainer() {
                             <button className={styles.EditButton}>Edit Profile</button>
                         </div>
 
-                        <div className={styles.ProfileName}>
-
+                        <div className={styles.ProfileName} >
+                            <img src="https://pbs.twimg.com/profile_images/1304851858142294016/sjdpxN6r_200x200.jpg" className={styles.test}></img>
                             <div className={styles.Name}>festive tree man</div>
                             <div className={styles.Handle}>@OsamaHansolo</div>
 
@@ -130,22 +132,22 @@ function ProfileContainer() {
                     <div onClick={() => {
                         setCurrentTwitterFeed("tweet");
                         setGetTweets(true);
-                    }} className={styles.Choice}>Tweets</div>
+                    }} className={currentTwitterFeed == "tweet" ? styles.Chosen : styles.Choice}>Tweets</div>
 
                     <div onClick={() => {
                         setCurrentTwitterFeed("tweet and reply");
                         setGetTweets(true);
-                    }} className={styles.Choice}>Tweets & replies</div>
+                    }} className={currentTwitterFeed == "tweet and reply" ? styles.Chosen : styles.Choice}>Tweets & replies</div>
 
                     <div onClick={() => {
                         setCurrentTwitterFeed("media");
                         setGetTweets(true);
-                    }} className={styles.Choice}>Media</div>
+                    }} className={currentTwitterFeed == "media" ? styles.Chosen : styles.Choice}>Media</div>
 
                     <div onClick={() => {
                         setCurrentTwitterFeed("like");
                         setGetTweets(true);
-                    }} className={styles.Choice}>Likes</div>
+                    }} className={currentTwitterFeed == "like" ? styles.Chosen : styles.Choice}>Likes</div>
 
                 </div>
 
