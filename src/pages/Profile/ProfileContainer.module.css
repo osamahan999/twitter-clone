@@ -1,0 +1,133 @@
+.TwitterFeed {
+
+
+    border-top: grey;
+    border-left: grey;
+    border-right:grey;
+    border-style: solid;
+    border-width: 1px;
+
+    padding-right: 2px;
+    background-color: #15202b;
+    width: 37%;
+    height: 49.4vh;
+    min-width: 600px;
+
+}
+
+.CoverPhoto {
+    width: 100%;
+}
+
+.Scrollable {
+    overflow-y: auto;  /*adds scroll to this container*/
+    scrollbar-width: none;  /* Firefox */
+}
+
+.EditProfile {
+    width:100%;
+    display:flex;
+    justify-content: flex-end;    
+}
+
+.EditButton {
+    margin-top: 5px;
+    margin-right: 3%;
+    height: 40px;
+    width: 18%;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: #1da1f2;
+    border-radius: 100px 100px 100px 100px;
+
+    background-color: #15202b;
+
+    color: #1da1f2;
+    font-weight: 750;
+    font-size: 14px;
+}
+
+.ProfileBio { 
+    margin-left: 10px;
+}
+
+.ProfileName {
+    margin-bottom: 10px;
+}
+.Name {
+    color: white;
+    font-size: 18px;
+    font-weight: 450;
+}
+
+.Handle {
+    font-size: 14px;
+    color: grey;
+}
+
+.Bio {
+    color: white;
+    font-size : 14px;
+}
+
+.PersonalInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+    margin-top: 10px;
+}
+
+.Info {
+    color:grey;
+}
+
+.Follows {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:25%
+}
+
+.FollowContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:16%;
+}
+
+.Amt {
+    color:white;
+    font-weight: 800;
+}
+
+.AmtOf {
+    color:grey;
+    margin-left: 5px;
+}
+
+.TweetContentChoices {
+    width: 100%;
+    color:lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.Choice {
+    height:5vh;
+    padding:8px;
+    display: flex;
+    justify-content: center;
+    
+    flex-direction: column;
+}
+
+.Choice:hover {
+    height:5vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: red;
+}
