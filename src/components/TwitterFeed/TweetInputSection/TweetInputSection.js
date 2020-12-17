@@ -17,11 +17,7 @@ function TweetInputSection(props) {
 
     useEffect(() => {
         if (tweetClicked) {
-            console.log(setTweetSubmitted(true));
-
-            console.log("tweet clicked " + tweetClicked + " tweetSubmitted " + tweetSubmitted);
-
-
+            setTweetSubmitted(true);
 
             if (tweetContent) {
 
@@ -31,15 +27,13 @@ function TweetInputSection(props) {
 
                 }).then((response) => {
 
-                    { props.updateFeed() };
+                    props.updateFeed();
 
-                    console.log(response.data);
                 }).catch((error) => {
 
                     console.log(error)
                 })
 
-                console.log(tweetContent);
             }
         }
 

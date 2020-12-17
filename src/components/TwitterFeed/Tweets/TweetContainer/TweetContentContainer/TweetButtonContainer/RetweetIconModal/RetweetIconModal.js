@@ -40,7 +40,6 @@ function RetweetIconModal({ updateRetweets, tweetUUID, name, handle, timeTweeted
                 }).then((response) => {
 
                     updateTweetComponent();
-                    console.log(response.data);
                 }).catch((error) => {
 
                     console.log(error)
@@ -57,7 +56,6 @@ function RetweetIconModal({ updateRetweets, tweetUUID, name, handle, timeTweeted
                 }).then((response) => {
                     updateTweetComponent();
 
-                    console.log(response.data);
 
                 }).catch((error) => {
 
