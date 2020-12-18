@@ -1,0 +1,17 @@
+.TwitterFeed {
+
+
+    border-top: grey;
+    border-left: grey;
+    border-right:grey;
+    border-style: solid;
+    border-bottom: grey;;
+    border-width: 1px;
+
+    padding-right: 2px;
+    background-color: #15202b;
+    width: 37%;
+    height: 48.8vh;
+    min-width: 600px;
+
+}

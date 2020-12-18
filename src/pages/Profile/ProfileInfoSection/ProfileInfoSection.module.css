@@ -1,0 +1,134 @@
+
+.CoverPhoto {
+    width: 100%;
+    border-left:  rgb(105, 105, 105);
+    border-right: rgb(105, 105, 105);
+    height:100%;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.EditProfile {
+    width:100%;
+    display:flex;
+    justify-content: flex-end;    
+}
+
+.EditButton {
+    margin-top: 5px;
+    margin-right: 3%;
+    height: 40px;
+    width: 18%;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: #1da1f2;
+    border-radius: 100px 100px 100px 100px;
+
+    background-color: #15202b;
+
+    color: #1da1f2;
+    font-weight: 750;
+    font-size: 14px;
+}
+
+.ProfileBio { 
+
+    padding-left: 10px;
+    border-top:  rgb(105, 105, 105);
+    border-left:  rgb(105, 105, 105);
+    border-right: rgb(105, 105, 105);
+    border-bottom: rgb(105, 105, 105);
+    border-style: solid;
+    border-width: 1px;
+
+}
+
+.ProfileName {
+    margin-bottom: 10px;
+    position: relative;
+}
+.Name {
+    color: white;
+    font-size: 18px;
+    font-weight: 450;
+}
+
+.Handle {
+    font-size: 14px;
+    color: grey;
+}
+
+.Bio {
+    color: white;
+    font-size : 14px;
+}
+
+.PersonalInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+    margin-top: 10px;
+}
+
+.Info {
+    color:grey;
+}
+
+.Follows {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:25%
+}
+
+.FollowContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:16%;
+}
+
+.Amt {
+    color:white;
+    font-weight: 800;
+}
+
+.AmtOf {
+    color:grey;
+    margin-left: 5px;
+}
+
+
+
+
+.ProfilePhoto {
+    position: absolute;
+    
+    border-width: 3px;
+    border-style: solid;
+    border-color: #15202b;
+    
+
+    border-radius: 100px 100px 100px 100px;
+    width: 25%;
+    bottom: 100%;
+}
+
+.EditProfileModal {
+    display: flex;
+	justify-content: center;
+    align-items: center;
+   
+}
+
+.ModalContent {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+	width: 800px;
+	height: 300px;
+    background-color: white;
+}

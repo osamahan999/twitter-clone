@@ -1,0 +1,59 @@
+.TwitterFeedTabs {
+    width: 99.7%;
+    color:lightgray;
+    display: flex;
+    
+    flex-direction: row;
+    justify-content: space-evenly;
+
+
+    border-top:  rgb(105, 105, 105);
+    border-left:  rgb(105, 105, 105);
+    border-right: rgb(105, 105, 105);
+    border-bottom: rgb(105, 105, 105);
+    border-style: solid;
+    border-width: 1px;
+}
+
+
+.Choice {
+    height:5vh;
+    padding:8px;
+    text-align: center;
+    min-width:22.5%;
+    display: flex;
+    justify-content: center;
+    
+    flex-direction: column;
+}
+
+.Choice:hover {
+
+    background-color: rgba(62, 84, 180, 0.51)   ;
+    -webkit-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    transition: background-color 300ms linear; 
+    color: #1da1f2;
+
+}
+
+.Chosen {
+    height:5vh;
+    min-width:22.5%;
+    text-align: center;
+
+    padding:8px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #1da1f2;
+}
+
+.Chosen:hover {
+ 
+    color: #1da1f2;
+    background-color: rgba(62, 84, 180, 0.51)   ;
+    -webkit-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    transition: background-color 300ms linear; 
+}
