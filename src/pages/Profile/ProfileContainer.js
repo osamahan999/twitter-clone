@@ -29,6 +29,7 @@ function ProfileContainer(props) {
                 <ProfileInfoSection
 
                     profilePicUrl="https://pbs.twimg.com/profile_images/1304851858142294016/sjdpxN6r_200x200.jpg"
+                    profileCoverPicUrl="https://pbs.twimg.com/profile_banners/746513468233179144/1579486343/600x200"
                     profileName="festive tree man"
                     profileHandle="@OsamaHansolo"
                     profileBio="big heart, bigger heart issues"

@@ -30,7 +30,24 @@ function UserTweets(props) {
 
                     console.log(error)
                 })
-            } else {
+            } else if (props.currentFeed == "like") {
+
+                axios.get("http://localhost:5000/tweets/getLikes", {
+                    params: {
+                        _id: props.userID
+                    }
+                }).then((response) => {
+
+                    setTweets(response.data);
+
+                }).catch((error) => {
+
+                    console.log(error)
+                })
+
+            }
+
+            else {
                 setTweets(null);
             }
 

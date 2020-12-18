@@ -15,7 +15,7 @@ function ProfileInfoSection(props) {
     return (
         <div>
             <div className={styles.CoverPhoto}>
-                <img src="https://pbs.twimg.com/profile_banners/746513468233179144/1579486343/600x200"></img>
+                <img src={props.profileCoverPicUrl}></img>
             </div>
 
             <div className={styles.ProfileBio}>
