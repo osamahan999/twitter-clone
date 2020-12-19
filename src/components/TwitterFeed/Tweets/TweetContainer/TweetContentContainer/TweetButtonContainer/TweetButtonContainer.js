@@ -25,7 +25,7 @@ function TweetButtonContainer(props) {
 
     useEffect(() => {
 
-        axios.get("http://localhost:5000/tweets/isLiked", {
+        axios.get("http://localhost:5000/like/isLiked", {
             params: {
                 userID: userUUID,
                 tweetUUID: props.tweetUUID
@@ -42,7 +42,7 @@ function TweetButtonContainer(props) {
             console.log(error)
         })
 
-        axios.get("http://localhost:5000/tweets/isRetweeted", {
+        axios.get("http://localhost:5000/retweet/isRetweeted", {
             params: {
                 userID: userUUID,
                 tweetUUID: props.tweetUUID
@@ -66,7 +66,7 @@ function TweetButtonContainer(props) {
 
         if (!liked) {
 
-            axios.post("http://localhost:5000/tweets/like", {
+            axios.post("http://localhost:5000/like/like", {
 
                 tweetUUID: props.tweetUUID,
                 userID: userUUID
@@ -81,7 +81,7 @@ function TweetButtonContainer(props) {
         } else {
 
             //unlikes
-            axios.post("http://localhost:5000/tweets/unlike", {
+            axios.post("http://localhost:5000/like/unlike", {
 
                 tweetUUID: props.tweetUUID,
                 userID: userUUID
