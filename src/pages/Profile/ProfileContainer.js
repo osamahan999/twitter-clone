@@ -15,7 +15,6 @@ const url = "https://pbs.twimg.com/profile_images/1304851858142294016/sjdpxN6r_n
 
 function ProfileContainer(props) {
 
-    const [getTweets, setGetTweets] = useState(true);
     const [currentTwitterFeed, setCurrentTwitterFeed] = useState("tweet");
 
     return (
@@ -42,7 +41,6 @@ function ProfileContainer(props) {
                 {/* The tabs for switching between media, lieks, etc */}
                 <TwitterFeedTabs
                     handleClick={(e) => setCurrentTwitterFeed(e)}
-                    updateTweets={() => setGetTweets(true)}
                     currentFeed={currentTwitterFeed}
 
                 />
@@ -53,9 +51,6 @@ function ProfileContainer(props) {
 
                     url={url}
                     userID={userUUID}
-                    updateFeed={getTweets}
-                    feedUpdated={() => setGetTweets(false)}
-                    feedNeedsUpdating={() => setGetTweets(true)}
                     currentFeed={currentTwitterFeed}
 
                 />

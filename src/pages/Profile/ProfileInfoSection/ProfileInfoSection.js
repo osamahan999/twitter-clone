@@ -10,7 +10,6 @@ function ProfileInfoSection(props) {
 
     const [modalOpen, setModalOpen] = useState(false);
 
-    const profilePicUrl = props.profilePicUrl;
 
     return (
         <div>
@@ -18,7 +17,7 @@ function ProfileInfoSection(props) {
                 <img src={props.profileCoverPicUrl}></img>
             </div>
 
-            <div className={styles.ProfileBio}>
+            <div className={styles.ProfileDataContainer}>
                 <div className={styles.EditProfile}>
                     <button onClick={() => setModalOpen(true)} className={styles.EditButton}>Edit Profile</button>
 
@@ -28,8 +27,8 @@ function ProfileInfoSection(props) {
 
                 </div>
 
-                <div className={styles.ProfileName} >
-                    <img src={profilePicUrl} className={styles.ProfilePhoto}></img>
+                <div className={styles.ProfilePhotoNameHandleContainer} >
+                    <img src={props.profilePicUrl} className={styles.ProfilePhoto}></img>
                     <div className={styles.Name}>{props.profileName}</div>
                     <div className={styles.Handle}>{props.profileHandle}</div>
 

@@ -18,7 +18,6 @@ function TweetContentContainer(props) {
 
             <TweetButtonContainer
 
-                updateFeed={props.updateFeed}
                 likes={props.likes}
                 retweets={props.retweets}
                 tweetUUID={props.tweetUUID}

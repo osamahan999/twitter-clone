@@ -9,52 +9,47 @@ function UserTweets(props) {
 
     const [tweets, setTweets] = useState(null);
 
-
-
-
     //use of useEffect fixes the double post problem. 
     useEffect(() => {
-        if (props.updateFeed) {  //axios get request to get tweet content 
-            props.feedUpdated();
 
-            if (props.currentFeed == "tweet") {
-                axios.get("http://localhost:5000/tweets/getUserTweets", {
-                    params: {
-                        userID: props.userID
-                    }
-                }).then((response) => {
 
-                    setTweets(response.data);
+        if (props.currentFeed == "tweet") {
+            axios.get("http://localhost:5000/tweets/getUserTweets", {
+                params: {
+                    userID: props.userID
+                }
+            }).then((response) => {
 
-                }).catch((error) => {
+                setTweets(response.data);
 
-                    console.log(error)
-                })
-            } else if (props.currentFeed == "like") {
+            }).catch((error) => {
 
-                axios.get("http://localhost:5000/tweets/getLikes", {
-                    params: {
-                        _id: props.userID
-                    }
-                }).then((response) => {
+                console.log(error)
+            })
+        } else if (props.currentFeed == "like") {
 
-                    setTweets(response.data);
+            axios.get("http://localhost:5000/like/getLikes", {
+                params: {
+                    _id: props.userID
+                }
+            }).then((response) => {
 
-                }).catch((error) => {
+                setTweets(response.data);
 
-                    console.log(error)
-                })
+            }).catch((error) => {
 
-            }
-
-            else {
-                setTweets(null);
-            }
-
+                console.log(error)
+            })
 
         }
 
-    })
+        else {
+            setTweets(null);
+        }
+
+
+
+    }, [props.currentFeed])
 
     /**
        * Getting time in seconds, minutes, hours, days, or months for timestamp of tweet
@@ -84,10 +79,6 @@ function UserTweets(props) {
 
     return (
 
-
-
-
-
         <div className={styles.TwitterFeed}>
 
 
@@ -96,7 +87,6 @@ function UserTweets(props) {
 
                 return <Tweet
 
-                    updateFeed={props.feedNeedsUpdating}
                     tweetUUID={tweet._id}
                     name="Osama"
                     handle="OsamaH"

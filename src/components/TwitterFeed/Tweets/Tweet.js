@@ -18,7 +18,6 @@ function Tweet(props) {
             <div className={styles.TweetContainer}>
                 <ProfilePhotoTweetbox url={props.url} />
                 <TweetContentContainer
-                    updateFeed={props.updateFeed}
                     likes={props.likes}
                     retweets={props.retweets}
                     tweetUUID={props.tweetUUID}

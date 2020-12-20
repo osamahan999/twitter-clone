@@ -32,7 +32,7 @@
     font-size: 14px;
 }
 
-.ProfileBio { 
+.ProfileDataContainer { 
 
     padding-left: 10px;
     border-top:  rgb(105, 105, 105);
@@ -44,7 +44,7 @@
 
 }
 
-.ProfileName {
+.ProfilePhotoNameHandleContainer {
     margin-bottom: 10px;
     position: relative;
 }
@@ -99,8 +99,6 @@
     color:grey;
     margin-left: 5px;
 }
-
-
 
 
 .ProfilePhoto {
