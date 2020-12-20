@@ -20,6 +20,7 @@ function UserTweets(props) {
                 }
             }).then((response) => {
 
+                setTweets(null);
                 setTweets(response.data);
 
             }).catch((error) => {
@@ -34,6 +35,7 @@ function UserTweets(props) {
                 }
             }).then((response) => {
 
+                setTweets(null);
                 setTweets(response.data);
 
             }).catch((error) => {
@@ -63,15 +65,27 @@ function UserTweets(props) {
         if (time / 60 <= 1) return (Math.floor(time) + "m");
         time /= 60;
 
-        if (time / 24 <= 1) return (Math.floor(time) + "hr");
+        if (time / 24 <= 1) {
+            if (Math.floor(time) == 1) return (Math.floor(time) + "hr");
+            return (Math.floor(time) + "hrs");
+        }
+
         time /= 24;
 
-        if (time / 30 <= 1) return (Math.floor(time) + " days");
+        if (time / 30 <= 1) {
+            if (Math.floor(time) == 1) return (Math.floor(time) + " day");
+            return (Math.floor(time) + " days");
+        }
         time /= 30;
 
-        if (time / 12 <= 1) return (Math.floor(time) + " months");
+        if (time / 12 <= 1) {
+            if (Math.floor(time) == 1) return (Math.floor(time) + " month");
+            return (Math.floor(time) + " months");
+
+        }
         time /= 12;
 
+        if (Math.floor(time) == 1) return (time = " year");
         return (time + " years");
 
 
