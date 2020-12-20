@@ -2,6 +2,12 @@ import React, { useState } from 'react';
 
 import styles from './ProfileInfoSection.module.css';
 import Modal from "@material-ui/core/Modal";
+import LocationIcon from '../../../components/TwitterFeed/Tweets/TweetContainer/TweetContentContainer/TweetButtonContainer/TweetIcons/LocationIcon';
+import DateOfBirthIcon from '../../../components/TwitterFeed/Tweets/TweetContainer/TweetContentContainer/TweetButtonContainer/TweetIcons/DateOfBirthIcon';
+import JoinDateIcon from '../../../components/TwitterFeed/Tweets/TweetContainer/TweetContentContainer/TweetButtonContainer/TweetIcons/JoinDateIcon';
+import ThreeDotsIcon from '../../../components/TwitterFeed/TweetInputSection/TweetInput/BottomInputSection/BottomIcons/Icons/ThreeDotsIcon/ThreeDotsIcon';
+import MessagesIcon from '../../../components/LeftSideBar/Icons/MessagesIcon';
+import FollowButton from '../../../components/RightSideBar/FollowButton';
 
 
 
@@ -18,14 +24,52 @@ function ProfileInfoSection(props) {
             </div>
 
             <div className={styles.ProfileDataContainer}>
-                <div className={styles.EditProfile}>
-                    <button onClick={() => setModalOpen(true)} className={styles.EditButton}>Edit Profile</button>
 
-                    <Modal className={styles.EditProfileModal} open={modalOpen} onClose={() => setModalOpen(false)} >
-                        <div className={styles.ModalContent} >hi</div>
-                    </Modal>
+                {false ?
+                    <div className={styles.EditProfile}>
+                        <button onClick={() => setModalOpen(true)} className={styles.EditButton}>Edit Profile</button>
 
-                </div>
+                        <Modal className={styles.EditProfileModal} open={modalOpen} onClose={() => setModalOpen(false)} >
+                            <div className={styles.ModalContent} >hi</div>
+                        </Modal>
+
+                    </div>
+                    :
+                    <div className={styles.InteractContainer}>
+
+                        <div className={styles.InteractWithProfile}>
+
+                            <div >
+                                {true   /*hasDropdown?*/ &&
+                                    <div className={styles.CircledIcon}>
+                                        <ThreeDotsIcon />
+                                    </div>
+                                }
+                            </div>
+
+                            <div >
+                                {true /*DMs enabled ?*/ &&
+                                    <div className={styles.CircledIcon}>
+
+                                        <MessagesIcon />
+
+                                    </div>
+
+                                }
+                            </div>
+
+                            <div className={styles.CircledButton}>
+                                {true /* Follow */ &&
+                                    <FollowButton />
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+
+                }
+
+
 
                 <div className={styles.ProfilePhotoNameHandleContainer} >
                     <img src={props.profilePicUrl} className={styles.ProfilePhoto}></img>
@@ -38,9 +82,24 @@ function ProfileInfoSection(props) {
                 <div className={styles.Bio}>{props.profileBio}</div>
 
                 <div className={styles.PersonalInfo}>
-                    {/* {if location public} */ true && <div className={styles.Info}> location </div>}
-                    {/* {if DOB public} */ true && <div className={styles.Info}> May 14 1999 </div>}
-                    {/* {if join date public} */ true && <div className={styles.Info}> Joined June 2016 </div>}
+                    {/* {if location public} */ true &&
+                        <div className={styles.Info}>
+                            <LocationIcon />
+                            <div>Location </div>
+                        </div>
+                    }
+                    {/* {if DOB public} */ true &&
+                        <div className={styles.Info}>
+                            <DateOfBirthIcon />
+                            <div>May 14 1999</div>
+                        </div>
+                    }
+                    {/* {if join date public} */ true &&
+                        <div className={styles.Info}>
+                            <JoinDateIcon />
+                            <div>Joined June 2016</div>
+                        </div>
+                    }
 
                 </div>
 

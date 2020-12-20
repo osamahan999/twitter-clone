@@ -1,6 +1,7 @@
 .TweetNameInfoUserName {
-    color:grey;
+    color:rgb(136, 153, 166);
     margin-left:5px;
+    font:14px;
 }
 
 .TweetNameInfo {

@@ -1,0 +1,12 @@
+.followButton {
+    outline: 0;
+    -moz-outline-style: none;
+    margin-left: auto;
+    background-color: transparent;
+    border: 0px;
+    color: #1da1f2;
+    padding: 4px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}

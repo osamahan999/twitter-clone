@@ -4,7 +4,7 @@ import './App.css';
 import LeftSidebar from './components/LeftSideBar/LeftSidebar'
 import TwitterFeed from './components/TwitterFeed/TwitterFeed/TwitterFeed'
 import RightSidebar from './components/RightSideBar/RightSidebar'
-import ProfileContainer from './pages/Profile/ProfileContainer';
+import Profile from './pages/Profile/Profile';
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
 
       <LeftSidebar />
       {/* <TwitterFeed /> */}
-      <ProfileContainer />
+      <Profile />
       <RightSidebar />
 
 

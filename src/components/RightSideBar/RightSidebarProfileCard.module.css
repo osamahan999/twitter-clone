@@ -11,6 +11,12 @@
     gap: 8px;
 }
 
+.contentContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
 .username {
     color: rgb(255, 255, 255);
     font-weight: 400;
@@ -21,7 +27,8 @@
     color: rgb(136, 153, 166);
 }
 
-.followButton {
+.FollowButton {
+    
     outline: 0;
     -moz-outline-style: none;
     margin-left: auto;
@@ -33,4 +40,6 @@
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+    
+
 }

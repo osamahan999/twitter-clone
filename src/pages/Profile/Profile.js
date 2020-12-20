@@ -13,7 +13,7 @@ const userUUID = "5fd8983dc0bee625f4526ace"; //a user's id which we wil be stori
 const url = "https://pbs.twimg.com/profile_images/1304851858142294016/sjdpxN6r_normal.jpg";
 
 
-function ProfileContainer(props) {
+function Profile(props) {
 
     const [currentTwitterFeed, setCurrentTwitterFeed] = useState("tweet");
 
@@ -64,4 +64,4 @@ function ProfileContainer(props) {
     );
 }
 
-export default ProfileContainer;
+export default Profile;
